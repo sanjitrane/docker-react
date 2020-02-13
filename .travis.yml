@@ -4,4 +4,4 @@ services:
 before-install:
   - docker build -t sanjitrane/react -f Dockerfile.dev .
 script:
-  - docker run -e CI=true sanjitrane/react npm run test
+  - docker run sanjitrane/react npm run test -- --coverage
